@@ -11,14 +11,15 @@
 一、简单易操作；二、通用，各行业都能适用；三、易扩展、可根据不同行业的特殊需求进行扩展定制；四、地图显示速度快，用户体验好；五、功能强大。</p>
 
 <p>技术特点：</p>
-<p>一、支持矢量ShapeFile动态投影，将其他坐标系的shp动态投影叠加到天地图或google底图上；</p>
+<p>一、支持矢量ShapeFile动态投影，将其他坐标系的shp动态投影叠加到天地图或google底图上，需要shp数据的.prj文件；</p>
 <p>二、支持矢量shp、影像tiff、tpk叠加google底图时的坐标纠偏；</p>
 <p>三、支持在线瓦片的离线下载</p>
-<p>四、支持要素的采集和编辑，包含图形编辑和属性，支持节点的捕捉追踪、添加、删除、移动，图斑的合并、裁剪、挖孔等，支持redo、undo；</p>
+<p>四、支持要素的采集和编辑，包含图形编辑和属性，支持节点的捕捉追踪、添加、删除、移动，文件图斑的合并、裁剪、挖孔等，支持redo、undo；</p>
 <p>五、支持定位、轨迹和路径搜索，定位图标指示了当前所在位置，其中图标的箭头指示了手机的朝向，即地图是上北下南，定位箭头的方向便是手机的朝向；
 轨迹功能记录了用户行走的路线；路径搜索，调用了天地图的在线接口，返回最优路线；</p>
 <p>六、支持多媒体功能，拍照、录音、录像，以及照片文字的标注等；</p>
 <p>用户可以参考UCMap OpenGL版开发文档，以及基于该源码做各种修改和扩展，欢迎加入QQ讨论群：543201967；</p>
+<p></p>
 <p><a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic1.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic1.png" alt="Image text" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic2.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic2.png" alt="Image text" style="max-width:100%;"></a>
 <a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic3.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic3.png" alt="Image text" style="max-width:100%;"></a>
