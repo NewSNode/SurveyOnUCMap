@@ -2,10 +2,10 @@
 <p>“外调助手”基于安卓GIS组件UCMap OpenGL版开发（源码官网下载地址 <a href="http://www.creable.cn/kuibu/xiazai.asp" rel="nofollow">http://www.creable.cn/kuibu/xiazai.asp</a> ），适用于林业、国土、管线以及各类POI点等行业的外业数据采集；支持天地图和Google地图为底图，
 在天地图或Google地图上可以叠加自己的影像图和ShapeFile矢量图，支持ShapeFile矢量要素的采集和编辑，同时，还支持拍照、录音、录像等多媒体功能。</p>
 
+<p>加载图层的方法：</p>
 <p>加载shp，需要将shp的几个文件都拷贝到手机内置存储卡根目录下；</p>
-
-<p>加载影像tiff或tpk，需要用UCMap（OpenGL版）开发包里的 UCMap地图配置工具 将tiff或tpk统一转成 通用的web墨卡托的mbtiles 格式，
-  然后将mbtiles文件拷贝到手机内置存储卡根目录下实现加载，具体怎么用这个转换工具，看开发包里的教程最后章节</p>
+<p>加载影像tiff或tpk瓦片，需要用UCMap（OpenGL版）开发包里的 UCMap地图配置工具 将tiff或tpk统一转成 通用的web墨卡托的mbtiles 格式，
+  然后将mbtiles文件拷贝到手机内置存储卡根目录下实现加载，具体怎么用这个转换工具，看UCMap OpenGL版 开发包里的教程最后章节</p>
 
 <p>“外调助手”具有以下几个特点：
 一、简单易操作；二、通用，各行业都能适用；三、易扩展、可根据不同行业的特殊需求进行扩展定制；四、地图显示速度快，用户体验好；五、功能强大。</p>
