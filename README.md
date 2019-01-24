@@ -13,3 +13,8 @@
 轨迹功能记录了用户行走的路线；路径搜索，调用了天地图的在线接口，返回最优路线；
 五、多媒体功能，支持拍照、录音、录像等功能；</p>
 <p>以上只是外业数据采集中最通用的功能，您可以参考UCMap OpenGL版开发文档，以及基于该源码做各种修改和扩展，欢迎加入QQ讨论群：543201967；</p>
+<p><a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic1.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic1.png" alt="Image text" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic2.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic2.png" alt="Image text" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic3.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic3.png" alt="Image text" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic4.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic4.png" alt="Image text" style="max-width:100%;"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/geochenyj/SurveyOnUCMap/blob/master/img-folder/pic5.png"><img src="https://github.com/geochenyj/SurveyOnUCMap/raw/master/img-folder/pic5.png" alt="Image text" style="max-width:100%;"></a></p>
