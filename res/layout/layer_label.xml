@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffffff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layer_label"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="#e1e1e1">
+
+
+        <ImageView
+            android:id="@+id/iv_layer_label_close"
+            android:layout_width="30dip"
+            android:layout_height="30dip"
+            android:layout_alignParentRight="true"
+            android:layout_margin="5dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/closemenu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="图层标注" />
+    </RelativeLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="图层:" />
+
+        <cn.creable.surveyOnUCMap.UnderLineTextView
+            android:id="@+id/tv_layer_label_layer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="2dip"
+            android:text="请选择要标注的图层"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5dip">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="字段:" />
+
+        <cn.creable.surveyOnUCMap.UnderLineTextView
+            android:id="@+id/tv_layer_label_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:paddingBottom="2dip"
+            android:text="请选择用于标注的字段"
+            android:textColor="#909090"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

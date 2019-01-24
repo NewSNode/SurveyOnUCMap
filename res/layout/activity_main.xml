@@ -1,0 +1,680 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dip">
+
+        <TextView
+            android:id="@+id/tv_main_qt"
+            android:layout_width="70dip"
+            android:layout_height="match_parent"
+            android:background="@drawable/listview_item_pressed_style"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="全 图"
+            android:textColor="#ff000000"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_main_gj"
+            android:layout_width="70dip"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/listview_item_pressed_style"
+            android:clickable="true"
+            android:gravity="center" android:visibility="gone"
+            android:text="外业采集"
+            android:textColor="#ff000000"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="外调助手"
+            android:textColor="#ff000000"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dip"
+            android:layout_alignParentBottom="true"
+            android:background="#E1E1E1" />
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="71dip"
+        android:layout_marginTop="40dip"
+        android:orientation="horizontal">
+
+        <cn.creable.ucmap.openGIS.UCMapView
+            android:id="@+id/mv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_menu"
+        android:layout_width="250dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="71dip"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/background"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/lv_main_menu"
+        android:layout_width="70dip"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dip"
+        android:divider="#DADBDA"
+        android:dividerHeight="1px"
+        android:fadingEdge="none"
+        android:scrollbars="none" />
+
+    <ImageView
+        android:layout_width="1dip"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="70dip"
+        android:layout_marginTop="40dip"
+        android:background="#E1E1E1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- <ImageView
+            android:id="@+id/iv_main_jp"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/jp" />
+
+        <ImageView
+            android:id="@+id/iv_main_dw"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@id/iv_main_jp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/dw" />
+
+        <ImageView
+            android:id="@+id/iv_main_ll"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_above="@id/iv_main_dw"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/dtll" /> -->
+
+        <RelativeLayout
+            android:id="@+id/rl_main_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dip"
+            android:layout_marginLeft="80dip"
+            android:layout_marginRight="80dip"
+            android:visibility="gone">
+
+           <cn.creable.surveyOnUCMap.HorizontalListView
+                android:id="@+id/hlv_main_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="60dip"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/out_view_backgroud" />
+
+           <com.github.johnkil.print.PrintView
+                android:id="@+id/pv_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:print_iconColor="@color/red"
+                app:print_iconSize="30dp"
+                app:print_iconText="@string/ic_cancel" />
+            <!-- <ImageView
+            android:id="@+id/pv_main"
+           android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+            android:src="@drawable/closetoolbar" /> -->
+        </RelativeLayout>
+        
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <Button
+                android:id="@+id/maptoolbar_toggle_open"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.85"
+                android:background="@drawable/ic_widget_closed_btn" />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:id="@+id/map_tool_bar"
+            android:orientation="vertical"
+            android:background="#fff"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="2dp"
+            android:layout_marginBottom="120dp"
+            android:layout_width="58dp"
+
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/maptoolbar_toggle_close"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_horizontal"
+                android:alpha="0.85"
+                android:background="@drawable/ic_widget_open_btn" />
+
+            <ScrollView
+                android:scrollbars="none"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/toolbar_new_layer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="2dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_point" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="新建图层"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_add_point"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_point" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加点"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+
+                        android:id="@+id/toolbar_add_polyline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_polyline" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加线"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_add_polygon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_polygon" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加面"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_add_point2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_point" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加点2"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_add_polyline2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_polyline" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加线2"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_add_polygon2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/add_polygon" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="添加面2"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_delete"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/delete" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="删除要素"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_edit_att"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/edit_att" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="编辑属性"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_node_move"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/node_move" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="编辑图形"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_merge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/merge" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="合并要素"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_split"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/split" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="裁切"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_dig"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/merge" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="挖孔"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_undo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/undo" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="撤销"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/toolbar_redo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_widget_item_touch"
+                        android:clickable="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical"
+                        android:padding="5dp">
+
+                        <ImageView
+
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:padding="5dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/redo" />
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="重做"
+                            android:textColor="@color/deep_gray"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
+        
+        <com.anlia.expandmenu.widget.HorizontalExpandMenu
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginRight="10dip"
+            android:layout_marginTop="10dip">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:clickable="true">
+                <TextView android:id="@+id/tv_maptype1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Google线路"/>
+                <TextView android:id="@+id/tv_maptype2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Google地形"/>
+                <TextView android:id="@+id/tv_maptype3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Google卫星"/>
+                <TextView android:id="@+id/tv_maptype4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="天地图线路"/>
+                <TextView android:id="@+id/tv_maptype5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="天地图卫星"/>
+            </LinearLayout>
+        </com.anlia.expandmenu.widget.HorizontalExpandMenu>
+    </RelativeLayout>
+</FrameLayout>
